@@ -1,0 +1,91 @@
+.submit-btn {
+  border: none;
+  padding: 15px 35px;
+  border-radius: 20px;
+  color: #fff;
+  background: var(--success);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #888;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease 0s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2e9887;
+  }
+
+  &:disabled {
+    color: #aaa;
+    background: #ddd;
+    text-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.backspace-btn {
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke: #281416;
+  }
+}
+
+.clear-btn {
+  display: flex;
+  align-items: stretch;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+  background: #cb3b48;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #888;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  &:disabled {
+    color: #aaa;
+    background: #ddd;
+    text-shadow: none;
+    cursor: not-allowed;
+
+    svg {
+      fill: #aaa;
+    }
+  }
+
+  svg {
+    fill: #fff;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+  }
+}
+
+.try-again-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  background: #82b1c3;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #888;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  &:disabled {
+    color: #f0f0f0;
+    background-color: #ccc;
+    text-shadow: none;
+    cursor: not-allowed;
+  }
+}

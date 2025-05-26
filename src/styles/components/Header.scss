@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: auto;
+  padding: 0 15px 5px;
+  max-width: 1024px;
+  height: 7vh;
+
+  &__language {
+    flex: 1 1 25%;
+  }
+
+  &__flags {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    span {
+      margin-left: 4px;
+      color: var(--desc);
+      opacity: 0.6;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 50%;
+
+    h2 {
+      .correct {
+        color: var(--correct);
+      }
+
+      .present {
+        color: var(--present);
+      }
+    }
+  }
+
+  &__points {
+    flex: 1 1 25%;
+    text-align: end;
+    font-weight: 700;
+
+    span {
+      color: var(--desc);
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+  }
+}

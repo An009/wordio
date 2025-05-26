@@ -1,0 +1,29 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+
+  &-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    // color: var(--desc);
+    // background: var(--bg-3);
+    // padding: 5px;
+    // border-radius: 50%;
+
+    &:hover {
+      svg {
+        fill: var(--success);
+      }
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

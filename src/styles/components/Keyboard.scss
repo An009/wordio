@@ -1,0 +1,40 @@
+.keyboard {
+  padding-bottom: 15px;
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &-button {
+    color: var(--text);
+    background: var(--bg-3);
+    width: 40px;
+    margin: 2px;
+    line-height: 42px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(105%);
+    }
+
+    &.correct {
+      color: #fff;
+      background: var(--correct);
+    }
+
+    &.present {
+      color: #fff;
+      background: var(--present);
+    }
+
+    &.absent {
+      color: #fff;
+      background: var(--absent);
+    }
+  }
+}

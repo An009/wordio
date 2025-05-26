@@ -1,0 +1,44 @@
+// libs
+@import './libs/variables';
+@import './libs/normalize';
+//themes
+@import './themes/light';
+@import './themes/dark';
+// components
+@import './components/Header';
+@import './components/Board';
+@import './components/Controls';
+@import './components/Keyboard';
+//common
+@import './buttons';
+@import './modals';
+
+body {
+  font-family: var(--font-family);
+  color: var(--text);
+  background: var(--bg-1);
+
+  p,
+  span {
+    color: var(--text);
+  }
+
+  svg {
+    fill: var(--text);
+  }
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  max-width: 560px;
+  height: 93vh;
+  margin: auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
