@@ -1,128 +1,129 @@
-import { chunk } from '../helpers'
+import { chunk } from "../helpers";
 
 export const prices = {
   win: 20, // win coeficient
   wp: 30,
   hints: {
     correct: 150,
-    absent: 10
-  }
-}
+    absent: 10,
+  },
+};
 
 export const languages = [
-  { value: 'en', label: 'English' },
-  { value: 'ua', label: 'Українська' },
-  { value: 'es', label: 'Español' },
-  { value: 'fr', label: 'Français' },
-  { value: 'de', label: 'Deutsch' },
-  { value: 'pt', label: 'Português' },
-  { value: 'it', label: 'Italiano' },
-  { value: 'nl', label: 'Nederlands' },
-  { value: 'pl', label: 'Polski' },
-  { value: 'sv', label: 'Svenska' },
-  { value: 'ie', label: 'Gaeilge' },
-  { value: 'cs', label: 'Čeština' },
-  { value: 'el', label: 'Ελληνικά' },
-  { value: 'tr', label: 'Türkçe' },
-  { value: 'id', label: 'Indonesian' },
-  { value: 'ph', label: 'Filipino' }
-]
+  { value: "en", label: "English" },
+  { value: "ua", label: "Українська" },
+  { value: "es", label: "Español" },
+  { value: "fr", label: "Français" },
+  { value: "de", label: "Deutsch" },
+  { value: "pt", label: "Português" },
+  { value: "it", label: "Italiano" },
+  { value: "nl", label: "Nederlands" },
+  { value: "pl", label: "Polski" },
+  { value: "sv", label: "Svenska" },
+  { value: "ie", label: "Gaeilge" },
+  { value: "cs", label: "Čeština" },
+  { value: "el", label: "Ελληνικά" },
+  { value: "tr", label: "Türkçe" },
+  { value: "id", label: "Indonesian" },
+  { value: "ph", label: "Filipino" },
+  { value: "ar", label: "العربية" },
+];
 
 export const keyboards = {
   en: {
-    alpha: 'qwertyuiopasdfghjklzxcvbnm',
+    alpha: "qwertyuiopasdfghjklzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [10, 9, 7])
-    }
+      return chunk(this.alpha, [10, 9, 7]);
+    },
   },
   ua: {
-    alpha: 'йцукенгшщзхїфівапролджєячсмитьбю',
+    alpha: "йцукенгшщзхїфівапролджєячсмитьбю",
     get kb() {
-      return chunk(this.alpha, [12, 11, 9])
-    }
+      return chunk(this.alpha, [12, 11, 9]);
+    },
   },
   cs: {
-    alpha: 'qwertyuiopasdfghjklzxcvbnmáčěéíšřůýž',
+    alpha: "qwertyuiopasdfghjklzxcvbnmáčěéíšřůýž",
     get kb() {
-      return chunk(this.alpha, [10, 9, 7, 10])
-    }
+      return chunk(this.alpha, [10, 9, 7, 10]);
+    },
   },
   de: {
-    alpha: 'qwertzuiopüasdfghjklöäyxcvbnm',
+    alpha: "qwertzuiopüasdfghjklöäyxcvbnm",
     get kb() {
-      return chunk(this.alpha, [11, 11, 7])
-    }
+      return chunk(this.alpha, [11, 11, 7]);
+    },
   },
   el: {
-    alpha: 'ερτυθιοπασδφγηξκλζχψωβνμ',
+    alpha: "ερτυθιοπασδφγηξκλζχψωβνμ",
     get kb() {
-      return chunk(this.alpha, [8, 9, 7])
-    }
+      return chunk(this.alpha, [8, 9, 7]);
+    },
   },
   es: {
-    alpha: 'qwertyuiopasdfghjklñzxcvbnm',
+    alpha: "qwertyuiopasdfghjklñzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [10, 10, 7])
-    }
+      return chunk(this.alpha, [10, 10, 7]);
+    },
   },
   fr: {
-    alpha: 'azertyuiopqsdfghjklmùwxcvbn',
+    alpha: "azertyuiopqsdfghjklmùwxcvbn",
     get kb() {
-      return chunk(this.alpha, [10, 11, 6])
-    }
+      return chunk(this.alpha, [10, 11, 6]);
+    },
   },
   id: {
-    alpha: 'qwertyuiopasdfghjklzxcvbnm',
+    alpha: "qwertyuiopasdfghjklzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [10, 9, 7])
-    }
+      return chunk(this.alpha, [10, 9, 7]);
+    },
   },
   ie: {
-    alpha: 'qwertyuiopasdfghjklzxcvbnmáéíóú',
+    alpha: "qwertyuiopasdfghjklzxcvbnmáéíóú",
     get kb() {
-      return chunk(this.alpha, [10, 9, 7, 5])
-    }
+      return chunk(this.alpha, [10, 9, 7, 5]);
+    },
   },
   it: {
-    alpha: 'qwertyuiopèasdfghjklòàùzxcvbnm',
+    alpha: "qwertyuiopèasdfghjklòàùzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [11, 12, 7])
-    }
+      return chunk(this.alpha, [11, 12, 7]);
+    },
   },
   nl: {
-    alpha: 'qwertyuiopasdfghjklzxcvbnm',
+    alpha: "qwertyuiopasdfghjklzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [10, 9, 7])
-    }
+      return chunk(this.alpha, [10, 9, 7]);
+    },
   },
   ph: {
-    alpha: 'qwertyuiopasdfghjklzxcvbnm',
+    alpha: "qwertyuiopasdfghjklzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [10, 9, 7])
-    }
+      return chunk(this.alpha, [10, 9, 7]);
+    },
   },
   pl: {
-    alpha: 'qwertyuiopasdfghjklzxcvbnmąćęłńóśźż',
+    alpha: "qwertyuiopasdfghjklzxcvbnmąćęłńóśźż",
     get kb() {
-      return chunk(this.alpha, [10, 9, 7, 9])
-    }
+      return chunk(this.alpha, [10, 9, 7, 9]);
+    },
   },
   pt: {
-    alpha: 'qwertyuiopasdfghjklçzxcvbnm',
+    alpha: "qwertyuiopasdfghjklçzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [10, 10, 7])
-    }
+      return chunk(this.alpha, [10, 10, 7]);
+    },
   },
   sv: {
-    alpha: 'qwertyuiopåasdfghjklöäzxcvbnm',
+    alpha: "qwertyuiopåasdfghjklöäzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [11, 11, 7])
-    }
+      return chunk(this.alpha, [11, 11, 7]);
+    },
   },
   tr: {
-    alpha: 'ertyuıopğüasdfghjklşizcvbnmöç',
+    alpha: "ertyuıopğüasdfghjklşizcvbnmöç",
     get kb() {
-      return chunk(this.alpha, [10, 11, 8])
-    }
-  }
-}
+      return chunk(this.alpha, [10, 11, 8]);
+    },
+  },
+};
