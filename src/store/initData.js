@@ -26,7 +26,7 @@ export const languages = [
   { value: "tr", label: "Türkçe" },
   { value: "id", label: "Indonesian" },
   { value: "ph", label: "Filipino" },
-  { value: "ar", label: "العربية" },
+  { value: "ar", label: "arabic" },
 ];
 
 export const keyboards = {
@@ -124,6 +124,12 @@ export const keyboards = {
     alpha: "ertyuıopğüasdfghjklşizcvbnmöç",
     get kb() {
       return chunk(this.alpha, [10, 11, 8]);
+    },
+  },
+  ar: {
+    alpha: "ضصثقفغعهخحجدشسيبلاتنمكطئءؤرﻻىةوزظ",
+    get kb() {
+      return chunk(this.alpha, [12, 11, 10]);
     },
   },
 };
