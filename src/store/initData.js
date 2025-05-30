@@ -1,4 +1,4 @@
-import { chunk } from "../helpers";
+import { chunk } from "../helpers/index.js";
 
 export const prices = {
   win: 20, // win coeficient
