@@ -26,7 +26,7 @@ export const languages = [
   { value: "tr", label: "Türkçe" },
   { value: "id", label: "Indonesian" },
   { value: "ph", label: "Filipino" },
-  { value: "ar", label: "arabic" },
+  { value: "ar", label: "العربية" },
 ];
 
 export const keyboards = {
