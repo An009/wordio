@@ -8,7 +8,7 @@ export const prices = {
     absent: 10,
   },
 };
-
+//adding arabic value and label
 export const languages = [
   { value: "en", label: "English" },
   { value: "ua", label: "Українська" },
@@ -26,7 +26,7 @@ export const languages = [
   { value: "tr", label: "Türkçe" },
   { value: "id", label: "Indonesian" },
   { value: "ph", label: "Filipino" },
-  { value: "ar", label: "العربية" },
+  { value: "ar", label: "Arabic" },
 ];
 
 export const keyboards = {
@@ -127,7 +127,7 @@ export const keyboards = {
     },
   },
   ar: {
-    alpha: "ضصثقفغعهخحجدشسيبلاتنمكطئءؤرﻻىةوزظ",
+    alpha: "ض ص ث ق ف غ ع ه خ ح ج دش س ي ب لا ت ن م ك ط ئءؤرﻻى ةوزظ",
     get kb() {
       return chunk(this.alpha, [12, 11, 10]);
     },
