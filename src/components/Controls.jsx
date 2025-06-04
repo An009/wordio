@@ -16,6 +16,7 @@ function Controls() {
   function checkWordNotExist(dictionary, currentWord) {
     if (!dictionary.find((word) => word === currentWord)) {
       dispatch.popups.open('unknown')
+      console.log(`"${currentWord}" is not a valid word in ${language}.`)
       return true
     }
   }
