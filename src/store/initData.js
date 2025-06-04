@@ -127,9 +127,9 @@ export const keyboards = {
     },
   },
   ar: {
-    alpha: "ض ص ث ق ف غ ع ه خ ح ج دش س ي ب لا ت ن م ك ط ئءؤرﻻى ةوزظ",
+    alpha: "ض ص ث ق ف غ ع ه خ ح ج د ش س ي ب لا ت ن م ك ط ئ ء ؤ ر ﻻ ى ة و ز ظ",
     get kb() {
-      return chunk(this.alpha, [12, 11, 10]);
+      return chunk(this.alpha.split(" "), [12, 11, 10]);
     },
   },
 };
