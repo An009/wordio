@@ -1,25 +1,7 @@
+// src/store/initData.js
+
 import { chunk } from "../helpers/index.js";
 
-export const difficultyLevels = {
-  easy: {
-    wordLengths: [4, 5], // Range of word lengths for easy
-    allowedGuesses: 8,
-    hintCostMultiplier: 0.8, // Hints are 20% cheaper
-    dictionaryFilter: "common", // A new concept: filter for common words
-  },
-  medium: {
-    wordLengths: [6, 7], // Range of word lengths for medium
-    allowedGuesses: 6,
-    hintCostMultiplier: 1, // Standard hint cost
-    dictionaryFilter: "all", // Use all words in dictionary
-  },
-  hard: {
-    wordLengths: [8, 9, 10, 11], // Range of word lengths for hard
-    allowedGuesses: 5,
-    hintCostMultiplier: 1.5, // Hints are 50% more expensive
-    dictionaryFilter: "all", // Use all words in dictionary (longer words provide difficulty)
-  },
-};
 export const prices = {
   win: 20, // win coeficient
   wp: 30,
@@ -28,7 +10,26 @@ export const prices = {
     absent: 10,
   },
 };
-//adding arabic value and label
+
+// Define difficulty levels with their configurations
+export const difficultyLevels = {
+  easy: {
+    wordLengths: [4, 5], // Example: 4-5 letter words
+    allowedGuesses: 8,
+    hintCostMultiplier: 0.8, // Hints are 20% cheaper
+  },
+  medium: {
+    wordLengths: [6, 7], // Example: 6-7 letter words
+    allowedGuesses: 6,
+    hintCostMultiplier: 1, // Standard hint cost
+  },
+  hard: {
+    wordLengths: [8, 9, 10], // Example: 8-10 letter words
+    allowedGuesses: 5,
+    hintCostMultiplier: 1.5, // Hints are 50% more expensive
+  },
+};
+
 export const languages = [
   { value: "en", label: "English" },
   { value: "ua", label: "Українська" },
@@ -105,9 +106,9 @@ export const keyboards = {
     },
   },
   it: {
-    alpha: "qwertyuiopèasdfghjklòàùzxcvbnm",
+    alpha: "qwertyuiopasdfghjklzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [11, 12, 7]);
+      return chunk(this.alpha, [10, 9, 7]);
     },
   },
   nl: {
@@ -123,9 +124,9 @@ export const keyboards = {
     },
   },
   pl: {
-    alpha: "qwertyuiopasdfghjklzxcvbnmąćęłńóśźż",
+    alpha: "qwertyuiopasdfghjklzxcvbnmńąćęłóśżź",
     get kb() {
-      return chunk(this.alpha, [10, 9, 7, 9]);
+      return chunk(this.alpha, [10, 9, 7, 8]);
     },
   },
   pt: {
@@ -137,19 +138,19 @@ export const keyboards = {
   sv: {
     alpha: "qwertyuiopåasdfghjklöäzxcvbnm",
     get kb() {
-      return chunk(this.alpha, [11, 11, 7]);
+      return chunk(this.alpha, [11, 10, 7]);
     },
   },
   tr: {
-    alpha: "ertyuıopğüasdfghjklşizcvbnmöç",
+    alpha: "qwertyuıopğüasdfghjklşizxcvbnmöç",
     get kb() {
-      return chunk(this.alpha, [10, 11, 8]);
+      return chunk(this.alpha, [11, 11, 8]);
     },
   },
   ar: {
-    alpha: "ضصثقفغعهخحجدشسيبلاتنمكطئءؤرﻻىةوزظ",
+    alpha: "ضصثقفغعهخحجدشسيبلاتنمكطذءؤرىزةو ظ",
     get kb() {
-      return chunk(this.alpha, [12, 11, 10]);
+      return chunk(this.alpha, [11, 10, 10, 6]);
     },
   },
 };
