@@ -1,5 +1,25 @@
 import { chunk } from "../helpers/index.js";
 
+export const difficultyLevels = {
+  easy: {
+    wordLengths: [4, 5], // Range of word lengths for easy
+    allowedGuesses: 8,
+    hintCostMultiplier: 0.8, // Hints are 20% cheaper
+    dictionaryFilter: "common", // A new concept: filter for common words
+  },
+  medium: {
+    wordLengths: [6, 7], // Range of word lengths for medium
+    allowedGuesses: 6,
+    hintCostMultiplier: 1, // Standard hint cost
+    dictionaryFilter: "all", // Use all words in dictionary
+  },
+  hard: {
+    wordLengths: [8, 9, 10, 11], // Range of word lengths for hard
+    allowedGuesses: 5,
+    hintCostMultiplier: 1.5, // Hints are 50% more expensive
+    dictionaryFilter: "all", // Use all words in dictionary (longer words provide difficulty)
+  },
+};
 export const prices = {
   win: 20, // win coeficient
   wp: 30,
