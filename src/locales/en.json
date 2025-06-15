@@ -21,6 +21,13 @@
       "darkMode": {
         "title": "Dark mode",
         "desc": "Switch dark or light mode"
+      },
+      "difficulty": {
+        "title": "Difficulty Level",
+        "desc": "Choose game difficulty",
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard"
       }
     },
     "statistics": {
@@ -53,12 +60,12 @@
     "hints": {
       "title": "Hints",
       "correct": {
-        "title": "Correct",
-        "desc": "Show correct letter"
+        "title": "Reveal Correct Letter",
+        "desc": "Reveal one letter of the hidden word."
       },
       "absent": {
-        "title": "Absent",
-        "desc": "Show absents letter on Keyboard"
+        "title": "Reveal Absent Letter",
+        "desc": "Reveal one letter that is not in the hidden word."
       }
     }
   }
