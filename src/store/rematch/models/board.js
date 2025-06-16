@@ -1,48 +1,48 @@
-// src/store/rematch/models/board.js
-
-import dictionary from '../../../dictionary';
-import { getRandomWord } from '../../../helpers';
+import dictionary from '../../../dictionary'
+import { getRandomWord } from '../../../helpers'
 
 const init = {
-  // ... (existing state)
-};
+  letters: [],
+  wordLength: 5,
+  row: 1,
+  answer: localStorage.getItem('persist:root') ? '' : getRandomWord(dictionary.en, 5)
+}
 
 export const board = {
   state: init,
   reducers: {
-    // ... (existing reducers)
-  },
-  effects: (dispatch) => ({
-    async checkWord(payload, rootState) {
-      const { letters, row, wordLength, answer } = rootState.board;
-      const currentWord = letters
-        .map((item) => item.letter)
-        .slice(-wordLength)
-        .join('');
-
-      if (!dictionary[rootState.language].find((word) => word === currentWord)) {
-        dispatch.popups.open('unknown');
-        console.log(`"${currentWord}" is not a valid word in ${rootState.language}.`);
-        return;
-      }
-
-      const newWord = { correct: [], present: [] };
-      answer.split('').forEach((letter, index) => {
-        newWord.correct.push(letter === currentWord[index]);
-        newWord.present.push(answer.includes(currentWord[index]));
-      });
-      dispatch.board.addWord(newWord);
-
-      if (currentWord === answer) {
-        dispatch.popups.open('win');
-        dispatch.statistics.win();
-        dispatch.hints.reset();
-        dispatch.hints.addWP(prices.win * wordLength + 5 * (6 - row));
-      } else if (row === 6) {
-        dispatch.popups.open('defeat');
-        dispatch.statistics.defeat();
-        dispatch.hints.reset();
-      }
+    reset(state) {
+      return { ...init, wordLength: state.wordLength }
     },
-  }),
-};
+
+    newAnswer(state, language) {
+      state.answer = getRandomWord(dictionary[language], state.wordLength)
+    },
+
+    setWordLength(state, count) {
+      state.wordLength = count
+    },
+
+    addLetter(state, payload) {
+      state.letters.push({ letter: payload.letter, status: payload.status ?? 'unknown' })
+    },
+
+    backspace(state) {
+      state.letters.pop()
+    },
+
+    addWord(state, newWord) {
+      for (let i = 0; i < state.wordLength; i++) {
+        const currentIndex = (state.row - 1) * state.wordLength + i
+
+        state.letters[currentIndex].status = newWord.correct[i]
+          ? 'correct'
+          : newWord.present[i]
+          ? 'present'
+          : 'absent'
+      }
+
+      state.row += 1
+    }
+  }
+}
