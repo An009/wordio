@@ -168,7 +168,7 @@ Typically we reply our customers for all the questions and queries within 24 hou
 
 Thank you very much.
 
-[support.telegram]: https://t.me/duckmetr
+[support.telegram]: https://t.me/AnouarTizgui
 [node.download]: https://nodejs.org/en/download
 [vscode.download]: https://code.visualstudio.com/download
 [versel]: https://vercel.com
