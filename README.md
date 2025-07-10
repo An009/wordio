@@ -174,15 +174,3 @@ Thank you very much.
 [versel]: https://vercel.com
 [netlify]: https://www.netlify.com
 [heroku]: https://heroku.com
-[versel.infrastructure]: https://vercel.com/features/infrastructure
-[versel.previews]: https://vercel.com/features/previews
-[versel.analytics]: https://vercel.com/analytics
-[versel.docs.cli]: https://vercel.com/docs/cli
-[versel.cra.template]: https://create-react-template.vercel.app
-[versel.new]: https://vercel.com/new
-[versel.docs.domains]: https://vercel.com/docs/concepts/projects/domains
-[versel.domains]: https://vercel.com/domains
-[versel.tests]: https://vercel.com/docs/integrations/checks-overview
-[github]: https://github.com
-[gitlab]: https://gitlab.com
-[bitbucket]: https://bitbucket.org
