@@ -5,6 +5,10 @@ import Modal from './Modal'
 import { keyboards, prices } from '../../store/initData'
 import { shuffle } from '../../helpers'
 
+// Hints.jsx
+// This component provides hints for the game, allowing players to reveal correct or absent letters.
+// It uses Redux for state management and i18next for translations.
+
 function Hints() {
   const dispatch = useDispatch()
   const { letters, wordLength, answer } = useSelector((state) => state.board)
