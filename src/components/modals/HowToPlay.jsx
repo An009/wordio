@@ -2,6 +2,11 @@ import { useTranslation } from 'react-i18next'
 import Modal from './Modal'
 import SampleWord from '../common/SampleWord'
 
+// HowToPlay.jsx
+// This component displays instructions on how to play the game, including examples of correct, present, and absent letters.
+// It uses the i18next library for translations and a SampleWord component to show examples.
+// It is designed to be used as a modal dialog in the application.
+
 function HowToPlay() {
   const { t } = useTranslation()
 
