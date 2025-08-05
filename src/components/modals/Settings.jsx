@@ -5,6 +5,11 @@ import Switch from 'react-switch'
 import Modal from './Modal'
 import { languages } from '../../store/initData'
 
+// Settings.jsx
+// This component allows users to change game settings such as word length, language, and theme.
+// It uses Redux for state management and i18next for translations.
+// The settings are displayed in a modal dialog, and users can select options that will affect the
+
 function Settings() {
   const dispatch = useDispatch()
   const { wordLength } = useSelector((state) => state.board)
