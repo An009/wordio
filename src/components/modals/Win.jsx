@@ -3,6 +3,11 @@ import { useTranslation } from 'react-i18next'
 import Modal from './Modal'
 import Button from '../common/Button'
 
+// Win.jsx
+// This component displays a message when the player wins the game.
+// It shows the number of hints earned and provides an option to start a new game.
+// It uses Redux for state management and i18next for translations.
+// The WinPopup component is designed to be used as a modal dialog in the application.
 function WinPopup() {
   const dispatch = useDispatch()
   const { earned } = useSelector((state) => state.hints)
