@@ -4,6 +4,10 @@ import Popup from 'reactjs-popup'
 import SVG from 'react-inlinesvg'
 import CloseSVG from '../../assets/svg/close.svg'
 
+// Modal.jsx
+// This component serves as a generic modal dialog for the application.
+// It uses Redux for state management and i18next for translations.
+// The modal can be used to display various types of content, such as hints, defeat messages
 function Modal({ preClose, title, body }) {
   const dispatch = useDispatch()
   const popups = useSelector((state) => state.popups)
