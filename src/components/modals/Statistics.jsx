@@ -6,6 +6,13 @@ import Modal from './Modal'
 
 import Button from '../common/Button'
 
+// Statistics.jsx
+// This component displays the player's game statistics, including the number of games played, wins, win
+// rate, current streak, and maximum streak.
+// It uses Redux for state management and i18next for translations.
+// The statistics are displayed in a modal dialog, and users can clear their statistics if desired.
+// The component also includes a button to clear the statistics, which is disabled if no games have been played.
+// The statistics are formatted and displayed in a user-friendly manner.
 function Statistics() {
   const dispatch = useDispatch()
   const { played, wins, winRate, currentStreak, maxStreak } = useSelector(
