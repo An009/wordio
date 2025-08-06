@@ -5,6 +5,8 @@ import Button from '../common/Button'
 import Key from './Key'
 import { keyboards } from '../../store/initData'
 
+// src/components/keyboard/Keyboard.jsx
+// the role os this component is to render a keyboard Layout with keys and handeles user input
 function Keyboard() {
   const dispatch = useDispatch()
   const { letters, wordLength, row } = useSelector((state) => state.board)
