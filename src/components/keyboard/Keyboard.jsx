@@ -5,8 +5,7 @@ import Button from '../common/Button'
 import Key from './Key'
 import { keyboards } from '../../store/initData'
 
-// src/components/keyboard/Keyboard.jsx
-// the role os this component is to render a keyboard Layout with keys and handeles user input
+// The role of this component is to render a keyboard layout with keys and handle user input
 function Keyboard() {
   const dispatch = useDispatch()
   const { letters, wordLength, row } = useSelector((state) => state.board)
@@ -28,33 +27,56 @@ function Keyboard() {
     return check('correct') || check('present') || check('absent') || check('unknown')
   }
 
+  // Defensive: fallback to English if language is not found
+  const kbLayout = keyboards[language]?.kb || keyboards['en'].kb
+
   return (
     <div className="keyboard">
-      {keyboards[language].kb
+      {kbLayout
         .map((row, index, array) => (index === array.length - 1 ? row + '<' : row))
         .map((row, index) => (
           <div key={index} className="keyboard-row">
-            {row
-              .split('')
-              .map((letter) =>
-                letter !== '<' ? (
-                  <Key
-                    key={letter}
-                    letter={letter}
-                    className={`keyboard-button ${
-                      checkLetterStatus(letters, absentLetters, letter)?.status ?? ''
-                    }`}
-                    onClick={() => addNewLetter(letter)}
-                  />
-                ) : (
-                  <Button
-                    key={letter}
-                    className="backspace-btn keyboard-button"
-                    text={<SVG src={BackspaceSVG} />}
-                    onClick={removeLastLetter}
-                  />
+            {Array.isArray(row)
+              ? row.map((letter) =>
+                  letter !== '<' ? (
+                    <Key
+                      key={letter}
+                      letter={letter}
+                      className={`keyboard-button ${
+                        checkLetterStatus(letters, absentLetters, letter)?.status ?? ''
+                      }`}
+                      onClick={() => addNewLetter(letter)}
+                    />
+                  ) : (
+                    <Button
+                      key={letter}
+                      className="backspace-btn keyboard-button"
+                      text={<SVG src={BackspaceSVG} />}
+                      onClick={removeLastLetter}
+                    />
+                  )
                 )
-              )}
+              : row
+                  .split('')
+                  .map((letter) =>
+                    letter !== '<' ? (
+                      <Key
+                        key={letter}
+                        letter={letter}
+                        className={`keyboard-button ${
+                          checkLetterStatus(letters, absentLetters, letter)?.status ?? ''
+                        }`}
+                        onClick={() => addNewLetter(letter)}
+                      />
+                    ) : (
+                      <Button
+                        key={letter}
+                        className="backspace-btn keyboard-button"
+                        text={<SVG src={BackspaceSVG} />}
+                        onClick={removeLastLetter}
+                      />
+                    )
+                  )}
           </div>
         ))}
     </div>
