@@ -25,7 +25,8 @@ export const languages = [
   { value: 'el', label: 'Ελληνικά' },
   { value: 'tr', label: 'Türkçe' },
   { value: 'id', label: 'Indonesian' },
-  { value: 'ph', label: 'Filipino' }
+  { value: 'ph', label: 'Filipino' },
+  { value: 'ar', label: 'العربية' }
 ]
 
 export const keyboards = {
@@ -123,6 +124,13 @@ export const keyboards = {
     alpha: 'ertyuıopğüasdfghjklşizcvbnmöç',
     get kb() {
       return chunk(this.alpha, [10, 11, 8])
+    }
+  },
+  ar: {
+    alpha: 'ضصثقفغعهخحجدشسيبلا تنمكطئءؤرﻻىةوزظ',
+    get kb() {
+      // Split by space to get each Arabic letter as a key
+      return chunk(this.alpha.split(' '), [12, 11, 10])
     }
   }
 }
