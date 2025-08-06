@@ -1,3 +1,5 @@
+// src/components/common/SampleWord.jsx
+// this component displays a sample word with letters styled based on thier state
 function SampleWord({ word, state }) {
   return (
     <div className={`sample-word sample-word__${state}`}>
