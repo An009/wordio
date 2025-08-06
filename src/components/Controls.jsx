@@ -8,6 +8,8 @@ import LightSVG from '../assets/svg/light.svg'
 import { prices } from '../store/initData'
 import dictionary from '../dictionary'
 
+// Controls.jsx
+// this component is responsible for the game controls, allowing the player to submit thier guesses.
 function Controls() {
   const dispatch = useDispatch()
   const { row, answer, letters, wordLength } = useSelector((state) => state.board)
