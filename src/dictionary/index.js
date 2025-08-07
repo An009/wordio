@@ -14,7 +14,8 @@ import el from './el.json'
 import tr from './tr.json'
 import id from './id.json'
 import ph from './ph.json'
+import ar from './ar.json'
 
-const dictionary = { en, ua, es, fr, de, pt, it, nl, pl, sv, ie, cs, el, tr, id, ph }
+const dictionary = { ar, en, ua, es, fr, de, pt, it, nl, pl, sv, ie, cs, el, tr, id, ph }
 
 export default dictionary
