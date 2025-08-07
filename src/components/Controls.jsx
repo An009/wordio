@@ -16,7 +16,7 @@ function Controls() {
   const language = useSelector((state) => state.language)
 
   function checkWordNotExist(dictionary, currentWord) {
-    if (!dictionary.find((word) => word === currentWord)) {
+    if (!Array.isArray(dictionary) || !dictionary.find((word) => word === currentWord)) {
       dispatch.popups.open('unknown')
       return true
     }
