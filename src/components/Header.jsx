@@ -1,6 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux'
 import flagsSvg from '../assets/svg/flags.svg'
 
+// Header.jsx
+// this component renders the header of the application.
+// it displays the current language selected by the user, the game title, and the current poinsts (WP).
+// it uses Redux for state managment to access the current language and points.
 function Header() {
   const dispath = useDispatch()
   const { wp } = useSelector((state) => state.hints)
