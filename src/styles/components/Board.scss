@@ -1,3 +1,6 @@
+// src/styles/components/Board.scss
+// this file defines the styles for the game board component.
+// it uses a grid Layout t oarrange the cells of the board.
 $board-sizes: 4, 5, 6, 7, 8, 9, 10, 11;
 
 @mixin board($number-of-letters) {
