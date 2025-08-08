@@ -1,5 +1,10 @@
 import { prices } from '../../initData'
 
+// hints.js
+// this file defines the initial state and reducers for the hints model in the application.
+// it manages the word points (wp), earned points, correct letters, and absent letters.
+// it provides functionality to reset the hints, add correct letters, add absent letters,
+// and add word points (wp).
 const init = {
   wp: prices.wp,
   earned: 0,
