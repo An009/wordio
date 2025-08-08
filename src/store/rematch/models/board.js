@@ -1,6 +1,11 @@
 import dictionary from '../../../dictionary'
 import { getRandomWord } from '../../../helpers'
 
+// board.js
+// this file defines the initial state and reducers for the board model in the application.
+// it manages the letters, word length, current row, and the answer word.
+// it provides functionality to reset the board, set a new answer, change word length, add letters,
+// handle backspace, and add a new word to the board.
 const init = {
   letters: [],
   wordLength: 5,
