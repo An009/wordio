@@ -36,4 +36,4 @@ jobs:
           git add .
           git commit -m "feat: Add Word of the Day for $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git pull origin main
-          git push origin main
+          git push
