@@ -2,7 +2,7 @@ name: Generate Word of the Day
 
 on:
   schedule:
-    - cron: "45 20 * * *" # Runs every day at 06:00 UTC
+    - cron: "0 22 * * *" # Runs every day at 06:00 UTC
   workflow_dispatch: # Allows manual triggering
 
 permissions:
