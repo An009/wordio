@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import Cell from './Cell'
-
+// this component renders the board with cells based on the current state of the game
 function Board() {
   const { letters, wordLength } = useSelector((state) => state.board)
 
