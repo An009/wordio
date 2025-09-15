@@ -1,3 +1,7 @@
+// src/store/rematch/models/statistics.js
+// this file defines the initial state and reducers for the statistics model in the application.
+// it manages the number of games played, wins, defeats, win rate, current streak, and max streak.
+// it provides functionality to reset statistics, record a win, and record a defeat.
 const init = {
   played: 0,
   wins: 0,
