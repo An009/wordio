@@ -10,6 +10,9 @@ import dictionary from '../dictionary'
 
 // Controls.jsx
 // this component is responsible for the game controls, allowing the player to submit thier guesses.
+// It includes buttons for settings, statistics, how to play, and hints.
+// The submit button checks the current word against the answer and updates the game state accordingly.
+
 function Controls() {
   const dispatch = useDispatch()
   const { row, answer, letters, wordLength } = useSelector((state) => state.board)
