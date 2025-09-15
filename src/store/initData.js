@@ -1,5 +1,9 @@
 import { chunk } from '../helpers'
 
+// initial data for the store
+// this file contains the initial configuration data for the application,
+// including themes, pricing, supported languages, and keyboard layouts.
+
 export const prices = {
   win: 20, // win coeficient
   wp: 30,
